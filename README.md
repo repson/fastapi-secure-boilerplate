@@ -1,1 +1,1 @@
-# secure-fastapi-boilerplate
+fastapi-secure-boilerplate
