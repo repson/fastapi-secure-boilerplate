@@ -4,6 +4,8 @@ from fastapi.middleware.cors import CORSMiddleware
 from app.api.api import api_router
 from app.core.config import settings
 
+import uvicorn
+
 app = FastAPI(
     title=settings.PROJECT_NAME,
     debug=settings.DEBUG,
@@ -21,3 +23,6 @@ if settings.BACKEND_CORS_ORIGINS:
     )
 
 app.include_router(api_router, prefix=settings.API_PREFIX)
+
+if __name__ == "__main__":
+    uvicorn.run(app, log_level="debug", reload=True)
