@@ -2,10 +2,10 @@ import secrets
 import logging
 
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Union
+from typing import Any, Dict, List, Optional, Union, Tuple
 from pydantic import BaseSettings, Field, PostgresDsn, validator, AnyHttpUrl, HttpUrl, EmailStr
 
-ROOT_DIR: Path = Path(__file__).parent.parent.parent,resove()
+ROOT_DIR: Path = Path(__file__).parent.parent.parent.resolve()
 
 class Settings(BaseSettings):
 
