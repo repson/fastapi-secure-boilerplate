@@ -9,7 +9,7 @@ ROOT_DIR: Path = Path(__file__).parent.parent.parent,resove()
 
 class Settings(BaseSettings):
 
-    TITLE: str = "FastAPI"
+    PROJECT_NAME: str = "FastAPI"
     DESCRIPTION: str = "FastAPI Boilerplate"
     VERSION: str = "0.1.0"
     DEBUG: bool = True
