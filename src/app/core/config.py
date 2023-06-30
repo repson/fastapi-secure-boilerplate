@@ -31,6 +31,8 @@ class Settings(BaseSettings):
 
     IS_ALLOWED_CREDENTIALS: bool = False
     ALLOWED_HOSTS: List[str] = ["*"]
+    ALLOWED_METHODS: List[str] = ["*"]
+    ALLOWED_HEADERS: List[str] = ["*"]
 
     LOGGING_LEVEL: int = logging.DEBUG
     LOGGERS: Tuple[str, str] = ("uvicorn.asgi", "uvicorn.access")
