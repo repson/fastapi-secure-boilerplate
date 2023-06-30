@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  backend:
+    restart: unless-stopped
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    entrypoint:
+      - /bin/sh
+      - -c
+      - |
+        uvicorn app.main:app --workers 1 --reload \
+        --worker-class uvicorn.workers.UvicornWorker \
+        --host 0.0.0.0 --port 8000
+    ports:
+      - 8000:8000
